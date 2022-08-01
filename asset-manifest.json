@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e06cd67.css",
+    "main.js": "/static/js/main.9316a768.js",
+    "static/media/blogger.svg": "/static/media/blogger.62a8996fa00f2b2752eab711613a7203.svg",
+    "static/media/twitter.svg": "/static/media/twitter.01d96b1ddebfd832394f7969802a88f6.svg",
+    "static/media/instagram.svg": "/static/media/instagram.bc5ad9a5c8efa3bf1c7ab72f19904d05.svg",
+    "index.html": "/index.html",
+    "static/media/share.svg": "/static/media/share.534358056984dd2b76ad4014c312fd20.svg",
+    "static/media/facebook.svg": "/static/media/facebook.6a25d3e5b0207d5f131b241db51c2b0e.svg",
+    "static/media/like.svg": "/static/media/like.8b32dae5960f495f1eb8dbe73852a720.svg",
+    "static/media/dislike-svgrepo-com.svg": "/static/media/dislike-svgrepo-com.c2111d4013f103c1da8db0af957c0e22.svg",
+    "static/media/like-svgrepo-com.svg": "/static/media/like-svgrepo-com.1e1d57c655b53174feed7e09060346bc.svg",
+    "static/media/add.svg": "/static/media/add.6c31542cc56e440e2ff2c2b11eca6740.svg",
+    "static/media/comment.svg": "/static/media/comment.c3e144a22e8749757a9b86f5f5a68658.svg",
+    "main.9e06cd67.css.map": "/static/css/main.9e06cd67.css.map",
+    "main.9316a768.js.map": "/static/js/main.9316a768.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e06cd67.css",
+    "static/js/main.9316a768.js"
+  ]
+}
