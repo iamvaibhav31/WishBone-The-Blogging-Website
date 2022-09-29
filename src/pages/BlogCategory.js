@@ -4,7 +4,11 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Card from '../components/Card'
 import Blog from "../components/static/image & SVG/blogger.svg"
+
+
 const BlogCategory = () => {
+    axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     const { id } = useParams()
     const [blogs, setblogs] = useState([])
     const [error, seterror] = useState("")
@@ -27,22 +31,8 @@ const BlogCategory = () => {
 
     return (
         <>
-            {(error === "") ?
-                <div className='container  mt-3'>
-                    <h1 className='display-4'>{id} catagory</h1>
-                    <Categorybar />
-                    <div className='row'>
-                        {blogs.map(
-                            (element) => {
-                                return <div className='col-md-4' key={element.id}>
-                                    <Card thumbnail={element.thumbnail} categories={element.categories} title={element.title} excerpt={element.excerpt} id={element.id} />
-                                </div>
-                            }
-                        )}
-                    </div>
-                </div>
-                :
-                <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style={{ minheight: "200px" }}>
+            {/* {(error === "") ? */}
+            {/* <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style={{ minheight: "200px" }}>
                     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                         <div class="toast-header">
                             <img src={Blog} class="rounded mr-2" alt="Logo" />
@@ -56,8 +46,23 @@ const BlogCategory = () => {
                             {error}
                         </div>
                     </div>
+                </div> */}
+            <div className='container  mt-3'>
+                <h1 className='display-4'>{id} catagory</h1>
+                <Categorybar />
+                <div className='row'>
+                    {blogs.map(
+                        (element) => {
+                            return <div className='col-md-4' key={element.id}>
+                                <Card thumbnail={element.thumbnail} categories={element.categories} title={element.title} excerpt={element.excerpt} id={element.id} />
+                            </div>
+                        }
+                    )}
                 </div>
-            }
+            </div>
+            {/* : */}
+
+
         </>
     )
 }

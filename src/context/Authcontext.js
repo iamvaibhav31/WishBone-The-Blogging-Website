@@ -126,7 +126,7 @@ export const AuthProvider = (props) => {
             } else {
                 LogoutUsers()
             }
-        }).catch((error) => { LogoutUsers() })
+        }).catch(() => { LogoutUsers() })
     }
 
     useEffect(() => {
@@ -137,7 +137,7 @@ export const AuthProvider = (props) => {
             }
         }, TIME)
         return () => clearInterval(interval)
-    }, [authToken, loading])
+    }, [authToken, loading, updatetoken])
 
     let contextdata = {
         userData: user,

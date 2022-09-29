@@ -47,8 +47,8 @@ const Create = () => {
         seterror(error.message);
       });
   };
-  console.log(thumbnail)
-  console.log(content)
+  // console.log(thumbnail)
+  // console.log(content)
   return (
     <>
       {visiblety === true ? error !== "" ? (
