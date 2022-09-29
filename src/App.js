@@ -28,7 +28,7 @@ function App() {
         {/* <Dataprovider> */}
           <Navbar/>
               <Routes>
-                  <Route exact path="Wishbone-The-Blogging-Website/" element={<Home/>} /> 
+                  <Route exact path="/" element={<Home/>} /> 
                   <Route exact path="/category/:id" element={<BlogCategory/>} /> 
                   <Route exact path="/detail/:id" element={<BlogDetail/>} /> 
                   <Route exact path="/profile/:id" element={<Profile/>} />
