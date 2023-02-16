@@ -5,16 +5,20 @@ import jwt_decode from "jwt-decode";
 
 const baseURL = 'https://vaibhavsharma3108.pythonanywhere.com'
 let authToken = localStorage.getItem("authTokens") ? JSON.stringify(localStorage.getItem("authTokens")) : null
+const token = authToken && authToken.access;
+const authHeader = token ? "Bearer " + token : "";
 
 const AxiosInstance = axios.create({
     baseURL: baseURL,
-    headers: { "Authorization": "Bearer " + authToken?.access }
+    headers: { "Authorization": "Bearer " + authHeader }
 })
 
 AxiosInstance.interceptors.request.use(async req => {
     if (!authToken) {
         authToken = localStorage.getItem("authTokens") ? JSON.stringify(localStorage.getItem("authTokens")) : null
-        req.headers.Authorization = "Bearer " + authToken?.access
+        const token = authToken && authToken.access;
+        const authHeader = token ? "Bearer " + token : "";
+        req.headers.Authorization = "Bearer " + authHeader
     }
 
     const user = jwt_decode(authToken.access)

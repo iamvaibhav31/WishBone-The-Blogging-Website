@@ -1,17 +1,17 @@
-import { Navigate ,Outlet } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import { useContext } from 'react'
 import Authcontext from '../context/Authcontext'
 
-
+import React from 'react'
 
 const ProtectedRoutes = () => {
     let data = useContext(Authcontext)
-    return data.userData===null?<Outlet/>:<Navigate to="/" />
+    return data.userData === null ? <Outlet /> : <Navigate to="/" />
 }
 
 export default ProtectedRoutes;
 
 export const AuthenticatedRoutes = () => {
     let data = useContext(Authcontext)
-    return data.userData===null?<Navigate to="/" />:<Outlet/>
+    return data.userData === null ? <Navigate to="/" /> : <Outlet />
 }
